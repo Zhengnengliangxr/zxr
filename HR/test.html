@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background: #cccccc;
+        }
+
+        ul {
+            display: none;
+        }
+
+        .menu div {
+            height: 35px;
+            line-height: 35px;
+            background: #99CC33;
+            border-bottom: 1px solid #333333;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        ul {
+            height: auto;
+            margin: 1px auto;
+            background: #99CCCC;
+            text-align: center;
+        }
+
+            ul li {
+                width: 220px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+            }
+
+                ul li:hover {
+                    background: #ccff33;
+                }
+
+                ul li a {
+                    text-decoration: none;
+                }
+    </style>
+
+</head>
+<body>
+    <div class="menu">
+     <div>网站管理</div>
+    <ul class="test">
+        <li><a href="siteInfo.php" target="main">网站基本信息</a></li>
+        <li><a href="updateSite.php" target="main">网站配置</a></li>
+        </ul>
+    <div>权限管理</div>
+    <ul>
+        <li><a href="userGroupList.php" target="main">用户组列表</a></li>
+        <li><a href="usersPower.php" target="main">用户权限列表</a></li>
+        </ul>
+    <div>用户管理</div>
+    <ul>
+        <li><a href="userList.php" target="main">用户列表</a></li>
+        <li><a href="addUser.php" target="main">添加用户</a></li> 
+        </ul> 
+    </div>
+  
+    <script>$(function () {
+    var dv = $(".menu div");
+    dv.click(function () {
+        var die = $(this);
+        if (die.next("ul").is(":hidden"))
+        {
+            $("ul").hide(1000);
+            die.next("ul").show(1000);
+        }
+        else { die.next("ul").hide(1000); }
+    })
+})</script>
+ 只显示日期
+    <input type="text" id="test1">
+    <script src="JavaScript/layDate-v5.0.9/laydate/laydate.js" charset=utf-8></script> <!-- 改成你的路径 -->
+    <script>
+//执行一个laydate实例
+laydate.render({
+  elem: '#test1' //指定元素
+});
+    </script>
+    
+     
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿* {
+box-sizing:border-box;
+
+}
+.zhaopin-href {
+display:block;
+width:100%;
+border-bottom:1px solid #ccc;
+height:40px;
+text-align:center;
+}
+
+.zhaopin-href-title {
+display:inline-block;
+border-bottom:4px solid #00ff21;
+height:30px;
+padding-bottom:5px;
+}

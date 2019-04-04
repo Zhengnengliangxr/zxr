@@ -1,0 +1,147 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="css/main.css" />
+    <meta name="viewpor" content="width=device-width,initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css"  href="bootstrap-3.3.7-dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css"  href="bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css"  href="bootstrap-3.3.7-dist/css/bootstrap-theme.css" />
+    <link rel="stylesheet" type="text/css"  href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" />
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js" ></script>
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/npm.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js"></script>
+
+
+     <style>
+       
+
+     
+
+        ul {
+            display: none;
+        }
+
+        .menu div {
+            height: 35px;
+            line-height: 35px;
+            background: #99CC33;
+            border-bottom: 1px solid #333333;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        ul {
+            height: auto;
+            margin: 1px auto;
+            background: #99CCCC;
+            text-align: center;
+        }
+
+            ul li {
+                width: 220px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+            }
+
+                ul li:hover {
+                    background: #ccff33;
+                }
+
+                ul li a {
+                    text-decoration: none;
+                }
+    </style>
+
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="header">
+        <div>中国平安济南电销分中心人力资源管理系统</div>
+        
+
+    </div>
+
+
+
+
+
+        <div class="left">
+            <div class="menu">
+            <div>员工管理</div>
+            <ul class="test">
+                <li><a href="#">员工花名册</a></li>
+                <li><a href="#">员工档案（奖惩）</a></li>        
+            </ul>         
+            
+            <div>部门管理</div>
+            <ul class="test">
+                <li><a href="#">添加部门信息</a></li>
+                <li><a href="#">管理部门信息</a></li>        
+            </ul>          
+             
+           <div>薪酬管理</div>
+            <ul class="test">
+                <li><a href="#">添加薪酬信息</a></li>
+                <li><a href="#">管理薪酬信息</a></li>        
+            </ul> 
+                        
+            <div>福利管理</div>
+            <ul class="test">
+                <li><a href="#">添加福利信息</a></li>
+                <li><a href="#">管理福利信息</a></li>        
+            </ul>
+            
+            <div>行政管理</div>
+            <ul class="test">
+                <li><a href="#">通知管理</a></li>
+                <li><a href="#">管理行政信息</a></li>        
+            </ul>     
+            
+            <div>招聘配置</div>
+            <ul class="test">
+                <li><a href="zhaopinManage.aspx">招聘管理</a></li>
+                <li><a href="GangWeiManage.aspx">招聘项目</a></li>
+                <li><a href="#">招聘统计</a></li>   
+                      
+            </ul>    
+            
+            <div>个人中心</div>
+                  <ul></ul>        
+         </div>
+</div>   
+
+ <script>$(function () {
+    var dv = $(".menu div");
+    dv.click(function () {
+        var die = $(this);
+        if (die.next("ul").is(":hidden"))
+        {
+            $("ul").hide(500);
+            die.next("ul").show(500);
+        }
+        else { die.next("ul").hide(500); }
+    })
+})</script>
+
+        <div class="kong"></div>
+     <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+             
+        </asp:ContentPlaceHolder>
+    </div>
+       
+        <div class="footer">我是页脚</div>
+    </form>
+</body>
+</html>
